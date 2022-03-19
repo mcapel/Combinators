@@ -21,12 +21,12 @@ prove x@(xl,xr) cs =
 prove' x vs [] _ = []
 prove' x vs (t:ts) cs = 
    if not (null ns) 
---   then ns
---   else prove' x vs ts1 cs
-   then trace (show q) ns
-   else trace (show q) prove' x vs ts1 cs
+   then ns
+   else prove' x vs ts1 cs
+--   then trace (show q) ns
+--   else trace (show q) prove' x vs ts1 cs
    where 
-     q = (t,dist t vs,[ (t', dist t' vs) | t' <- ts' ])
+--     q = (t,dist t vs,[ (t', dist t' vs) | t' <- ts' ])
 --     q = (t,[ (t', execute t') | t' <- ts', execute t' /= snd x])
      ts0 = scan t cs
      ts' = (nub ts0)\\[t]

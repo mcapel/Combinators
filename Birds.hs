@@ -154,7 +154,7 @@ dist' ts ((v,i):vs) =
    sum [ abs (j-i) | j <- myLookup v ts ]
    + dist' ts vs
 
-dist' :: Int -> [(CB, Int)] -> Int
+myLookup :: Int -> [(CB, t)] -> [t]
 myLookup v [] = []
 myLookup v ((A v',j):vs) | v==v' = j:myLookup v vs
                          | otherwise = myLookup v vs

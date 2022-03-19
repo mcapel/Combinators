@@ -1,10 +1,8 @@
-module Test where
+module Main where
 import Text.Printf
 import Control.Exception
 import System.CPUTime
-import ReadCB
 import Birds
-import Unify
 import Proofs
 import Execute
 
